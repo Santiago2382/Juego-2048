@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2048</title>
+  </head>
+  <body>
+    <!-- Contenedor principal del juego -->
+    <div id="app">
+      <div class="container-game">
+        <!-- Cabecera: Título y puntuación -->
+        <div class="header">
+          <h1 class="title">2048</h1>
+          <div class="container-score">
+            <div class="score">
+              <h3>SCORE</h3>
+              <span>0</span>
+            </div>
+            <div class="best-score">
+              <h3>BEST</h3>
+              <span>0</span>
+            </div>
+          </div>
+        </div>
+        <!-- Menú desplegable para seleccionar el objetivo del juego -->
+        <select id="gameGoal">
+          <option value="2048">2048</option>
+          <option value="4096">4096</option>
+          <option value="8192">8192</option>
+        </select>
+        
+        <!-- Contenedor de "Game Over" que se muestra cuando el jugador pierde -->
+        <div class="game-over-container" style="display: none;">
+          <h2>Game Over</h2>
+          <button class="restart-btn">
+              <img src="src/assets/restart-flecha.png" alt="Restart" /> 
+          </button>
+        </div> 
+        
+        <!-- Botones de dirección y nuevo juego -->
+        <div class="newgame">
+          <div class="container-buttons">
+            <!-- Flechas de dirección -->
+            <div class="arrow left">
+              <img src="src/assets/tecla-flecha.png" alt="Left arrow" />
+            </div>
+            <div class="arrow up">
+              <img src="src/assets/tecla-flecha.png" alt="Up arrow" />
+            </div>
+            <div class="arrow bottom">
+              <img src="src/assets/tecla-flecha.png" alt="Down arrow" />
+            </div>
+            <div class="arrow right">
+              <img src="src/assets/tecla-flecha.png" alt="Right arrow" />
+            </div>
+          </div>
+          <!-- Botón para iniciar un nuevo juego -->
+          <button>New Game</button>
+        </div>
+      </div>
+      
+      <!-- Tablero de juego -->
+      <div class="board">
+        <!-- Ventana emergente que se muestra cuando el jugador gana -->
+        <div class="container-win">
+          <h1>YOU WON!</h1>
+          <div class="win-score">Score: <span>1000</span></div>
+          <button class="button-win">New Game</button>
+        </div>     
+      </div>
+    </div>
+
+    <!-- Carga el script principal para la lógica del juego -->
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
